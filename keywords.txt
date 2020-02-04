@@ -1,0 +1,5 @@
+I2C_EEPROM_inopya	KEYWORD1
+write			   	KEYWORD2
+read				KEYWORD2
+save    			KEYWORD2
+load  				KEYWORD2
