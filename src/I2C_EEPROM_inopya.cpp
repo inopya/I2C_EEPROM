@@ -21,7 +21,9 @@ void I2C_EEPROM_inopya::write(unsigned int memory_pos, byte informacion) const
   Wire.write(informacion);                  	// Write byte
   Wire.endTransmission();
 
-  delay(5); //pausa necesaria para que se complete la escritura
+  /* pausa necesaria para que se complete la escritura */
+  //delay(5);   // se recomiendan 5 ms, pero en algunos modelos desde 3ms la consolidacion de datos es estable
+  delayMicroseconds(3500);   // "jugar" con este valor si se desea acelerar un poco el proceso
 }
 
 byte I2C_EEPROM_inopya::read(unsigned int memory_pos) const
