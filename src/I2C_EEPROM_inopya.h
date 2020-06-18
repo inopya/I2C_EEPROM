@@ -40,8 +40,8 @@ class I2C_EEPROM_inopya
 		Wire.write(*ptr);
 		Wire.endTransmission();
 		//Serial.print(memory_pos); Serial.print(F(" --> "));Serial.println(dato);
-		//delay(5);   // se recomiendan 5 ms, pero algunos modelos desde 3ms la consolidacion de datos es estable
-		delayMicroseconds(3500); // "jugar" con este valor si se desea acelerar un poco el proceso
+		//delay(5);   // se recomiendan 5 ms, pero en algunos modelos desde 3ms la consolidacion de datos es estable
+		delayMicroseconds(3500);   // "jugar" con este valor si se desea acelerar un poco el proceso
 		ptr++;
 		memory_pos++;
 	  }
@@ -67,7 +67,7 @@ class I2C_EEPROM_inopya
 		memory_pos++;
 	  }
 	 
-	  //Serial.print(F("saliendo de load desde EEPROM con ")); Serial.println(informacion);
+	  //Serial.print(F("load, saliendo de EEPROM con el valor ")); Serial.println(informacion);
 	  return informacion;  //es redundante porque lo carga en la variable original cuya direccion recibe
 	}
 
