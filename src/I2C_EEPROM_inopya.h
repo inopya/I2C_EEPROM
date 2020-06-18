@@ -31,7 +31,7 @@ class I2C_EEPROM_inopya
 	template< typename T > T &save(unsigned int memory_pos, T informacion )
 	{
 	  uint8_t *ptr = (uint8_t*) &informacion;
-	  //Serial.print(F("putEEPROM grabando ")); Serial.println(informacion);
+	  //Serial.print(F("save (grabando en EEPROM ")); Serial.println(informacion);
 	  for(int count=0; count<sizeof(T); count++){
 		Wire.beginTransmission(_chipID); 
 		Wire.write((int)(memory_pos >> 8));   // MSB
@@ -43,14 +43,14 @@ class I2C_EEPROM_inopya
 		ptr++;
 		memory_pos++;
 	  }
-	  //Serial.println(F("Fin de putEEPROM"));
+	  //Serial.println(F("Fin de save en EEPROM"));
 	}
 
 
 	/* parametros: 'Direccion de memoria (unsigned int)' de la que deseamos leer, variable (de cualquier tipo) para cargar el valor leido */
 	template< typename T > T &load(unsigned int memory_pos, T &informacion )
 	{
-	  //Serial.print(F("getEEPROM cargando "));Serial.print(sizeof(T));Serial.println(F(" bytes"));
+	  //Serial.print(F("load (cargando de EEPROM "));Serial.print(sizeof(T));Serial.println(F(" bytes"));
 	  uint8_t *ptr = (uint8_t*) &informacion;
 
 	  for(int count=0; count<sizeof(T); count++){
@@ -65,7 +65,7 @@ class I2C_EEPROM_inopya
 		memory_pos++;
 	  }
 	 
-	  //Serial.print(F("saliendo de getEEPROM con ")); Serial.println(informacion);
+	  //Serial.print(F("saliendo de load desde EEPROM con ")); Serial.println(informacion);
 	  return informacion;  //es redundante porque lo carga en la variable original cuya direccion recibe
 	}
 
