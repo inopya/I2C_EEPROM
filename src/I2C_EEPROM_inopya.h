@@ -2,6 +2,11 @@
  * Version 1.1
  * Admite lectura/escritura de cualquier tipo de datos:
  * byte, int, float... o incluso struct
+ *
+ * v1.1. >> Cambios realizados en las funciones de lectura y escritura dentro de este fichero (el .cpp se mantiene igual),  para datos mayores a un byte 
+ * es decir float, int, car[], struct... 
+ * Se consigue acelerar un poco el proceso de lectura y escritura, pero sobre todo corrigen fallos de escritura (la lectura era correcta) 
+ * sobre clones tipo WavGat basado en el chip LogicGreen LGT8F328 y que eran debidos a problemas con la libreria wire.h 
  */
  
 #include <Wire.h>
