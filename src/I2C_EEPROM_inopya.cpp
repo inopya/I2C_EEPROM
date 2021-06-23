@@ -1,5 +1,5 @@
 /*
- * Version 1.0
+ * Version 1.1
  * Admite lectura/escritura de cualquier tipo de datos:
  * byte, int, float... o incluso struct
  */
