@@ -2,10 +2,10 @@
 
 **Autor:** _Eulogio López_  
 
-Libreria para acceso mediannte I2C a memorias EEPROM externas de hasta 64kb. 
+Libreria para acceso mediante I2C a memorias EEPROM externas de hasta 64kb. 
 
 v1.1. >> Cambios realizados en las funciones de lectura y escritura de _I2C_EEPROM_inopya.h_ para datos mayores a un byte, es decir float, int, car[], struct... 
-Se consigue acelerar un poco el proceso de escritura, pero sobre todo corrigen fallos de escritura (la lectura era correcta) debidos a problemas con la libreria wire.h sobre clones tipo WavGat basado en el chip LogicGreen LGT8F328.
+Se consigue acelerar un poco el proceso de lectura y escritura, pero sobre todo corrigen fallos de escritura (la lectura era correcta) debidos a problemas con la libreria wire.h sobre clones tipo WavGat basado en el chip LogicGreen LGT8F328.
 
 ### **Funciones**
 
